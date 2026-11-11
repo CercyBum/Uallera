@@ -154,6 +154,18 @@ public class Board {
     }
     
     /**
+     * @brief Controlla se la board è piena.
+     */
+    public boolean isFull(){
+        for (int i = 0; i<cell.length; i++){
+            if (cell[i] == CELL_NONE){
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    /**
      * @brief Controlla se la partita è terminata.
      */
     private void checkIfEnded() {
